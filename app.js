@@ -157,12 +157,12 @@ function btn() {
         for (var i = 0; i < options.length; i++) {
             options[i].checked = false;
         }
-        document.getElementById("btn").disabled = true;
+        document.getElementById("btn").disabled = true; // This disables the Next button after moving to the next question. The user must select another answer before clicking Next again.
 
     }
     else {
 
-        document.getElementById("btn").disabled = true;
+        document.getElementById("btn").disabled = true; // it disable the btn after the test ends.
 
         var percentage = (score / array.length) * 100;
 
@@ -194,7 +194,7 @@ function btn() {
                 "<b>Percentage : " + percentage + "%</b>";
         }, 1000);
 
-        // Show conclusion after 4 seconds
+
         setTimeout(function () {
             document.getElementById("conclusion").innerHTML =
 
@@ -204,8 +204,10 @@ function btn() {
 }
 
 function btnClick() {
-    document.getElementById("btn").disabled = false;
+    document.getElementById("btn").disabled = false; // enable the btn after the option is selected
 }
+
+// timer function 
 
 var time = 180;
 
